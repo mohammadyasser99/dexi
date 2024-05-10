@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { BrowserRouter, Link } from "react-router-dom";
+import Routes from "./Routes";
+ import "./_app.scss";
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <ul className="nav">
+          <li>
+            <Link to="/one">Challenge 1</Link>
+          </li>
+          <li>
+            <Link to="/two">Challenge 2</Link>
+          </li>
+          <li>
+            <Link to="/three">Challenge 3</Link>
+          </li>
+        </ul>
+        <Routes />
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+export const Home = () => (
+  <>
+    <h1 className="title is-1 has-text-white">
+      Hello
+      <span aria-label="wave" role="img">
+        👋
+      </span>
+    </h1>
+    <h2 className="subtitle is-4 has-text-grey-lighter">
+      We are looking for highly creative individuals. To find them, we have
+      devised a test.
+    </h2>
+
+    <h2 className="subtitle is-4 has-text-grey-lighter">
+      There are 3 challenges linked above, each is designed to test a different
+      ability.
+    </h2>
+
+    <h2 className="subtitle is-4 has-text-grey-lighter">Good luck.</h2>
+  </>
+);
+
+export const BackToHome = () => (
+  <Link to="/" className="button is-link is-light is-small is-rounded mb-4">
+    &larr; Back to home
+  </Link>
+);
