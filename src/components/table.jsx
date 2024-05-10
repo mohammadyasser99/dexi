@@ -81,7 +81,7 @@ const email = useRef();
                 <Box sx={{
                     marginLeft:2,
                 }}>
-                    {row.name} <bold>{row.id}</bold>  <br/>
+                    {row.name}   <br/>
                     {row.email}
                 </Box>
                 </Box>
@@ -95,7 +95,7 @@ const email = useRef();
                 padding:'5px',
                 color:'black'
               }}>active</span></TableCell>
-              <TableCell >tyhyh</TableCell>
+              <TableCell >admin</TableCell>
               <TableCell > <span style={{
                 color:'blue',
                 cursor:'pointer'

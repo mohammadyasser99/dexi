@@ -42,7 +42,7 @@ const ChallengeThree = () => {
   return (
     <>
       <BackToHome />
-      <h1>{state}</h1>
+      {/* <h1>{state}</h1> */}
       <h3>
         Your Task is to fix the code with
         <span className="warning"> Minimum Changes </span>
