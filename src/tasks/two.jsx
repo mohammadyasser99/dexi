@@ -28,6 +28,7 @@ setNumberOfRecords(numberOfrecords+5);
 // setUsers(users.concat(userctx.users.slice(numberOfrecords+5,numberOfrecords+10)));
 setUsers(prevUsers =>[...prevUsers,...userctx.users.slice(numberOfrecords+5,numberOfrecords+10)]);
 
+
 }
 
 const getData = async (data) => {
@@ -40,7 +41,7 @@ const email = data.email;
 userctx.setUsers((prev) => {
 
 return prev.map((user) => {
-if (user.id == userkey) {
+if (user.id === userkey) {
 return {...user, name: name,email:email};
 }
 return user;
