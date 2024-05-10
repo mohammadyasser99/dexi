@@ -81,7 +81,7 @@ const email = useRef();
                 <Box sx={{
                     marginLeft:2,
                 }}>
-                    {row.name}   <br/>
+                    {row.name} <bold>{row.id}</bold>  <br/>
                     {row.email}
                 </Box>
                 </Box>
