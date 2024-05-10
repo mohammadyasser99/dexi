@@ -48,7 +48,7 @@ return user;
 );
 
 });
-setNumberOfRecords(numberOfrecords);
+setNumberOfRecords(0);
 }
 
   return (
